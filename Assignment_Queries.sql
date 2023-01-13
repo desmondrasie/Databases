@@ -143,33 +143,3 @@ GROUP BY category
 ORDER BY TotalSales DESC 
 FETCH FIRST ROW ONLY;
 
-
-
-
-
-
-
-
-
-
-
-
-
---------
------------
-------------
-
-SELECT actorID FROM Act GROUP BY actorID 
-
-SELECT COUNT(actorID) AS NumberofActors
-FROM (
-	SELECT actorID,COUNT(movieID) AS NumberofMovies
-	FROM Act
-	GROUP BY actorID
-	HAVING MAX(NumberofMovies)) 
-
-
-SELECT actorID,COUNT(movieID) AS NumberofMovies FROM Act GROUP BY actorID HAVING MAX()
-
-
-
